@@ -15,9 +15,13 @@ import vehiculo.Vehiculo;
     public class Ejecutor {
 
     public static void main(String[] args) {
-        Vehiculo vehiculo = new Vehiculo();
-        vehiculo.calcularValorMatricula();
-        System.out.println(vehiculo);
+        Vehiculo vehiculo = new Vehiculo("1105595985","toyota",2019,30000);
+        vehiculo.establecerValorMatricula();
+        
+        Vehiculo vehiculo1 = new Vehiculo("1105595985","toyota",2019,30000);
+        vehiculo1.establecerValorMatricula();
+        
+        System.out.println(vehiculo + "\n" + vehiculo1 );
     }
 }
 

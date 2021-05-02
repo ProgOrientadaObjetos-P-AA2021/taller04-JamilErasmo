@@ -14,38 +14,37 @@ public class Vehiculo {
     /**
      * @param args the command line arguments
      */
-    
     private String cedulaDueno;
     private String marcaVehiculo;
     private int anoFabricante;
     private double valorVehiculo;
     private double valorMatricula;
-    
-    public Vehiculo(){
-        cedulaDueno = "1104803620";
-        marcaVehiculo = "Toyota";
-        anoFabricante = 2015;
-        valorVehiculo = 30000;
-    }
-    
-    public void establecerCedulaDueno(String CD) {
-       cedulaDueno = CD;
+
+    public Vehiculo(String cedulad, String marcaVehi, int anoFabric, double valorV) {
+        cedulaDueno = cedulad;
+        marcaVehiculo = marcaVehi;
+        anoFabricante = anoFabric;
+        valorVehiculo = valorV;
     }
 
-    public void establecerMarcaVehiculo(String MV) {
-        marcaVehiculo = MV;
+    public void establecerCedulaDueno(String cd) {
+        cedulaDueno = cd;
     }
 
-    public void establecerAnoFabricante(int AF) {
-        anoFabricante = AF;
+    public void establecerMarcaVehiculo(String mv) {
+        marcaVehiculo = mv;
     }
 
-    public void establecerValorVehiculo(double VH) {
-        valorVehiculo = VH;
+    public void establecerAnoFabricante(int af) {
+        anoFabricante = af;
+    }
+
+    public void establecerValorVehiculo(double vh) {
+        valorVehiculo = vh;
     }
 
     public void establecerValorMatricula() {
-        valorMatricula =  anoFabricante * valorVehiculo * 0.002 ;
+        valorMatricula = valorVehiculo * 0.002;
     }
 
     public String obtenerCedulaDueno() {
@@ -69,15 +68,12 @@ public class Vehiculo {
     }
 
     @Override
-    public String toString(){
-        String cadena = "Jamil ";
-        return cadena; 
-    }
+    public String toString() {
+        return "cedula Dueño:" + this.cedulaDueno + "\nMarca Vehiculo:"
+                + this.marcaVehiculo + "\n año Fabricantes:"
+                + this.marcaVehiculo + "\nvalor Vehiculo:"
+                + this.valorVehiculo + "\nvalor Matricula:"
+                + this.valorMatricula + "\n";
 
-        public void calcularValorMatricula() {
-            throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-        }
     }
-    
-    
-
+}

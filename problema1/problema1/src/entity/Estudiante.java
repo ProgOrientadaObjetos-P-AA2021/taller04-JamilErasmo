@@ -12,21 +12,24 @@ package entity;
 public class Estudiante {
 
     private String nombre;
-    private double calificacion1;
-    private double calificacion2;
-    private double calificacion3;
+    private double calificaciondemateria1;
+    private double calificaciondemateria2;
+    private double calificaciondemateria3;
     private double promedio;
 
     public Estudiante(String nombre, double calificacion1, double calificacion2, double calificacion3) {
         this.nombre = nombre;
-        this.calificacion1 = calificacion1;
-        this.calificacion2 = calificacion2;
-        this.calificacion3 = calificacion3;
+        this.calificaciondemateria1 = calificacion1;
+        this.calificaciondemateria2 = calificacion2;
+        this.calificaciondemateria3 = calificacion3;
     }
 
     @Override
     public String toString() {
-        return String.format("Nombre: %s \nCalificación 1: %.2f \nCalificación 2: %.2f \nCalificación 3: %.2f \nPromedio: %.2f", nombre, calificacion1, calificacion2, calificacion3, promedio);
+        return String.format("Nombre: %s \nCalificación 1: %.2f \nCalificación "
+                + "2: %.2f \nCalificación 3: %.2f \nPromedio: %.2f", nombre, 
+                calificaciondemateria1, calificaciondemateria2, 
+                calificaciondemateria3, promedio);
     }
 
     public String obtenerNombre() {
@@ -38,27 +41,27 @@ public class Estudiante {
     }
 
     public double obtenerCalificacion1() {
-        return calificacion1;
+        return calificaciondemateria1;
     }
 
     public void establecerCalificacion1(double calificacion1) {
-        calificacion1 = calificacion1;
+        calificacion1 = calificaciondemateria1;
     }
 
     public double obtenerCalificacion2() {
-        return calificacion2;
+        return calificaciondemateria2;
     }
 
     public void establecerCalificacion2(double calificacion2) {
-        calificacion2 = calificacion2;
+        calificacion2 = calificaciondemateria2;
     }
 
     public double obtenerCalificacion3() {
-        return calificacion3;
+        return calificaciondemateria3;
     }
 
     public void establecerCalificacion3(double calificacion3) {
-        calificacion3 = calificacion3;
+        calificacion3 = calificaciondemateria3;
     }
 
     public double obtenerPromedio() {
@@ -66,7 +69,8 @@ public class Estudiante {
     }
 
     public void calcularPromedio() {
-        this.promedio = (calificacion1 + calificacion2 + calificacion3) / 3;
+        this.promedio = (calificaciondemateria1 + calificaciondemateria2 + 
+                calificaciondemateria3) / 3;
     }
 
 }
